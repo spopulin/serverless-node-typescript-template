@@ -10,10 +10,6 @@ export const example: APIGatewayProxyHandler = async (
 ): Promise<APIGatewayProxyResult> => {
   const body: any = event.body ? JSON.parse(event.body) : undefined;
 
-  if (!body) {
-    throw new Error("There's no body");
-  }
-
   const response = {
     statusCode: 200,
     body: JSON.stringify({

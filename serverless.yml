@@ -44,12 +44,13 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  hello:
+  example:
     handler: src/functions/example.example
     events:
       - http:
-          path: v1/example
           method: get
+          cors: true
+          path: /v1/example
 
 #    Define function environment variables here
 #    environment:
